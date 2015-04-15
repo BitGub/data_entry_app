@@ -43,10 +43,10 @@ Router::defaultRouteClass('Route');
 
 Router::scope('/', function ($routes) {
 
-    $routes->connect('/', ['controller' => 'Users', 'action' => 'index']);
+    $routes->connect('/', ['controller' => 'Users', 'action' => 'add']);
     
     $routes->resources('Users', [
-        'only' => ['index', 'view']
+        'only' => ['index', 'view', 'add']
     ]);
 
     /**

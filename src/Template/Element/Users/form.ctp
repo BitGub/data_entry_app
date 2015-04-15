@@ -1,5 +1,5 @@
 <div class="formContainer large-10 medium-9 columns">
-  <?= $this->Form->create($user); ?>
+  <?= $this->Form->create($user, ['action' => 'add']); ?>
   <fieldset>
     <div class="header">
       <span>Step 1: About You</span>
@@ -7,8 +7,10 @@
       <?php
         echo $this->Form->input('first_name');
         echo $this->Form->input('last_name');
-        echo $this->Form->input('gender');
-        echo $this->Form->input('dob');
+        echo $this->Form->input('gender', ['type' => 'select', 'options' => ['male' => 'Male', 'female' => 'Female']]);
+        echo $this->Form->input('dob', 
+                                ['minYear' => 1940,
+                                'maxYear' => date('Y')]);
         ?>
       <div class='form-actions'>
         <button class='form-button'>Next ></button>

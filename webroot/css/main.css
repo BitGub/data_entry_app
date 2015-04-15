@@ -85,3 +85,11 @@ form .header span {
 .form-actions .form-button:hover, .form-actions button[type="submit"]:hover {
   background: #1100AA linear-gradient(to bottom, #1100AA, #553399 80%);
 }
+
+.required > label {
+  font-weight: bold;
+}
+.required > label:after {
+  content: ' *';
+  color: #C3232D;
+}
