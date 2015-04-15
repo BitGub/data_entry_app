@@ -1,0 +1,87 @@
+#container {
+  background-color: #AABBEE; /* fallback */
+  background:rgba(170, 187, 238,0.5);
+}
+
+form {
+  margin: 0;
+}
+
+.formContainer {
+  background-color: #fff;
+  border-radius: 0.5em;
+  padding: 0.2em;
+  margin: 0;
+  -webkit-box-shadow: 11px 11px 21px 0px rgba(50, 50, 50, 0.4);
+  -moz-box-shadow:    11px 11px 21px 0px rgba(50, 50, 50, 0.4);
+  box-shadow:         11px 11px 21px 0px rgba(50, 50, 50, 0.4);
+}
+
+form fieldset {
+  border: none;
+  background-color: #E0E0E0;
+  border-radius: 0.5em;
+  padding: 0;
+  margin: 0.02em 0.05em 0.7em 0.05em;
+  clear: both;
+}
+
+form .header {
+  background: linear-gradient(#FFDD33, #FFBB33, #FF9933);
+  border-radius: 0.5em;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.input {
+  margin: 0.7em;
+}
+
+form .header span {
+  color: #fff;
+  
+}
+
+.input label {
+  font-weight:bold;
+}
+
+.input, .input input, textarea, select, button {
+  transition: all 0.5s ease;
+  border-radius:          0.5em;
+  -moz-border-radius:     0.5em;
+  -webkit-border-radius:  0.5em;
+}
+
+.input input:hover, textarea:hover, select:hover {
+  border: solid 1px #909090;
+}
+
+.input input, textarea, select {
+  box-shadow:         inset 1px 1px 10px 0 rgba(50, 50, 50, 0.4);
+  -webkit-box-shadow: inset 1px 1px 10px 0 rgba(50, 50, 50, 0.4);
+  -moz-box-shadow:    inset 1px 1px 10px 0 rgba(50, 50, 50, 0.4);
+}
+
+.input select[name="dob[year]"], select[name="dob[month]"], select[name="dob[day]"] {
+  width: 32%;
+  margin: 0 0.2em 0 0.2em;
+}
+
+.form-actions {
+  width: 100%;
+  display: block;
+}
+
+.form-actions .form-button, .form-actions button[type="submit"] {
+  transition: all 0.5s ease;
+  float:right;
+  margin-bottom: 0.5em;
+  margin-right: 0.5em;
+  padding: 0.5em 2.5em 0.5em 2.5em;
+  background: #1100CC linear-gradient(to bottom, #1100CC, #5533BB 80%);
+}
+
+.form-actions .form-button:hover, .form-actions button[type="submit"]:hover {
+  background: #1100AA linear-gradient(to bottom, #1100AA, #553399 80%);
+}

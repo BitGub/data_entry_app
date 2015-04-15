@@ -18,8 +18,18 @@ class UsersController extends AppController
      */
     public function index()
     {
-        $this->set('users', $this->paginate($this->Users));
-        $this->set('_serialize', ['users']);
+      $user = $this->Users->newEntity();
+      if ($this->request->is('post')) {
+          $user = $this->Users->patchEntity($user, $this->request->data);
+          if ($this->Users->save($user)) {
+              $this->Flash->success('The user has been saved.');
+              return $this->redirect(['action' => 'index']);
+          } else {
+              $this->Flash->error('The user could not be saved. Please, try again.');
+          }
+      }
+      $this->set(compact('user'));
+      $this->set('_serialize', ['user']);
     }
 
     /**
