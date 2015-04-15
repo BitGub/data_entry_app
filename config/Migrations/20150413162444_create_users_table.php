@@ -12,7 +12,7 @@ class CreateUsersTable extends AbstractMigration
      */
     public function change()
     {
-        $table = $this->table('users_tables');
+        $table = $this->table('users');
         $table->addColumn('first_name', 'string', [
             'default' => null,
             'limit' => 255,
