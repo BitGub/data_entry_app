@@ -51,9 +51,9 @@ class UsersTable extends Table
             ->notEmpty('gender')
             ->add('dob', 'valid', ['rule' => 'date'])
             ->requirePresence('dob', 'create')
-            ->notEmpty('dob')
-            ->requirePresence('comments', 'create')
-            ->notEmpty('comments');
+            ->notEmpty('dob');
+            // ->requirePresence('comments', 'create')
+            // ->notEmpty('comments');
 
         return $validator;
     }
@@ -67,7 +67,7 @@ class UsersTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->isUnique(['email']));
+        $rules->add($rules->isUnique(['email'], 'This email is already in Use'));
         return $rules;
     }
 }

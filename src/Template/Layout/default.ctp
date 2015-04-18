@@ -23,26 +23,28 @@ $description = 'Data Entry';
     <title>
         <?= $description ?>
     </title>
-
-    <?= $this->Html->css('base.css') ?>
+      
+    <?= $this->Html->css('normalize.css') ?>
+    <?= $this->Html->css('skeleton.css') ?>
     <?= $this->Html->css('main.css') ?>
+    
+    <?= $this->Html->script('http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js') ?>
+    <?= $this->Html->script('users.js') ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <div id="container">
+    <div class="container">
 
-        <div id="content">
-            <?= $this->Flash->render() ?>
+      <?= $this->Flash->render() ?>
 
-            <div class="row">
-                <?= $this->fetch('content') ?>
-            </div>
-        </div>
-        <footer>
-        </footer>
+      <div class="content">
+        <?= $this->fetch('content') ?>
+      </div>
+      <footer>
+      </footer>
     </div>
 </body>
 </html>

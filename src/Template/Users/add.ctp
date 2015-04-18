@@ -1,1 +1,1 @@
-<? echo $this->element('/Users/form', ['user' => $user]); ?>
+<? echo $this->element('/Users/form', ['user' => $user, 'isValid' => true]); ?>
