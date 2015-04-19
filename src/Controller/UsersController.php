@@ -10,7 +10,7 @@ use App\Controller\AppController;
  */
 class UsersController extends AppController
 {
-
+  public $helpers = ['User', 'Time'];
     /**
      * Index method
      *
