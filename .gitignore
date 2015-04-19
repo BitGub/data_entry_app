@@ -1,5 +1,11 @@
-/vendor/*
-/config/app.php
+cat > .gitignore <<EOT
+/lib/Cake/Console/Templates/skel/tmp/
+/plugins
+/vendors
+/build
+/dist
 /tmp/*
 /logs/*
 .DS_Store
+.elasticbeanstalk/
+EOT
