@@ -12,7 +12,9 @@ use Cake\Validation\Validator;
  */
 class UsersTable extends Table
 {
-
+  public static function defaultConnectionName() {
+      return 'live';
+  }
     /**
      * Initialize method
      *
