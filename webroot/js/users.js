@@ -38,18 +38,16 @@ $(function(){
       if (!$parentTag.hasClass('error')) {      // stop it from appending more than one span
           $parentTag.addClass('error').append('<span class="error">Must only contain numbers.</span>');
           isValid = false;
-      } else if ($parentTag.hasClass('error-message') || isNumber(inputVal)){
+      } else {
         removeFormErrors($parentTag);
       }
     }
       
     if ($(this).is('#email') && !emailReg.test(inputVal)) {
-      console.log("hii");
       if (!$parentTag.hasClass('error')) {
         $parentTag.addClass('error').append('<span class="error">Enter a valid email address.</span>');
         isValid = false;
-      } else if ($(this).next('.error-message').length !=0 || emailReg.test(inputVal)){
-        console.log("hii");
+      } else {
         removeFormErrors($parentTag);
       }
     }
