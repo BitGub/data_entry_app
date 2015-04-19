@@ -23,7 +23,11 @@
       <td> <?= $user->email ?> </td>
       <td> <?= $this->Number->format($user->telephone) ?> </td>
       <td> <?= $this->Time->format($user->dob,'dd MM Y') ?> </td>
-      <td> <?= $this->Text->autoParagraph(h($user->comments));  ?> </td>
+      <td class='comments'> <?= $this->Text->truncate($user->comments, 22,
+        [
+            'ellipsis' => '...',
+            'exact' => false
+        ]);  ?> </td>
     </tr>
   <?php endforeach; ?>
   </tbody>
